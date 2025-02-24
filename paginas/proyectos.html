@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestros Proyectos - Malagón Saavedra y Cía. S.A.S</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Carga de FontAwesome, si se requiere -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Encabezado con logo -->
+  <header class="page-header">
+    <a href="../index.html">
+      <img src="../img/logo-2025-horizontal.png" alt="Logo Malagón Saavedra" class="header-logo">
+    </a>
+  </header>
+
+  <main class="proyectos">
+    <h1>Nuestros Proyectos</h1>
+    
+    <div class="tabs">
+      <!-- Menú de pestañas -->
+      <ul class="tab-menu">
+        <li class="active" data-tab="tab1">Proyecto 1</li>
+        <li data-tab="tab2">Proyecto 2</li>
+        <li data-tab="tab3">Proyecto 3</li>
+        <li data-tab="tab4">Proyecto 4</li>
+      </ul>
+      
+      <!-- Contenido de las pestañas -->
+      <div class="tab-content">
+        <div id="tab1" class="tab-panel active">
+          <h2>Proyecto 1</h2>
+          <div class="project-media">
+            <img src="../img/proyectos/proyecto1.jpg" alt="Imagen del Proyecto 1">
+          </div>
+          <div class="project-description">
+            <p>
+              Aquí se describe el Proyecto 1. Puedes incluir detalles, especificaciones y otra información relevante.
+            </p>
+          </div>
+        </div>
+        <div id="tab2" class="tab-panel">
+          <h2>Proyecto 2</h2>
+          <div class="project-media">
+            <img src="../img/proyectos/proyecto2.jpg" alt="Imagen del Proyecto 2">
+          </div>
+          <div class="project-description">
+            <p>
+              Aquí se describe el Proyecto 2. Incluye información detallada e imágenes representativas.
+            </p>
+          </div>
+        </div>
+        <div id="tab3" class="tab-panel">
+          <h2>Proyecto 3</h2>
+          <div class="project-media">
+            <img src="../img/proyectos/proyecto3.jpg" alt="Imagen del Proyecto 3">
+          </div>
+          <div class="project-description">
+            <p>
+              Aquí se describe el Proyecto 3. Detalla sus características y resultados.
+            </p>
+          </div>
+        </div>
+        <div id="tab4" class="tab-panel">
+          <h2>Proyecto 4</h2>
+          <div class="project-media">
+            <img src="../img/proyectos/proyecto4.jpg" alt="Imagen del Proyecto 4">
+          </div>
+          <div class="project-description">
+            <p>
+              Aquí se describe el Proyecto 4. Explica el proceso, avances y logros alcanzados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script>
+    // JavaScript para cambiar entre pestañas
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.tab-menu li');
+      const panels = document.querySelectorAll('.tab-panel');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          // Quitar la clase active de todos
+          tabs.forEach(item => item.classList.remove('active'));
+          panels.forEach(panel => panel.classList.remove('active'));
+          
+          // Activar la pestaña y panel correspondientes
+          this.classList.add('active');
+          const panelId = this.getAttribute('data-tab');
+          document.getElementById(panelId).classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+/* ============================
+   1. RESET Y ESTILOS BASE
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  color: #282828;
+  line-height: 1.6;
+}
+
+/* ============================
+   2. ENCABEZADO (HEADER)
+============================ */
+.page-header {
+  padding: 20px;
+  text-align: left;
+}
+
+.header-logo {
+  max-width: 200px;
+  max-height: 200px;
+  width: 100%;
+  height: auto;
+}
+
+/* Centrar logo en pantallas pequeñas */
+@media (max-width: 600px) {
+  .page-header {
+    text-align: center;
+  }
+}
+
+/* ============================
+   3. PÁGINA PROYECTOS
+============================ */
+.proyectos {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.proyectos h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #001e4f;
+  margin-bottom: 20px;
+}
+
+/* Pestañas (Tabs) */
+.tabs {
+  width: 100%;
+}
+
+.tab-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ce7036;
+}
+
+.tab-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #282828;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.tab-menu li.active {
+  background-color: #ce7036;
+  color: #fff;
+  border-color: #ce7036;
+}
+
+/* Contenido de pestañas */
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tab-panel {
+  display: none;
+  width: 100%;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panel h2 {
+  font-size: 1.8rem;
+  color: #001e4f;
+  margin-bottom: 10px;
+}
+
+/* Imágenes y texto de cada proyecto */
+.project-media {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.project-media img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #282828;
+  line-height: 1.6;
+}
+
+/* Responsive para pestañas */
+@media (max-width: 768px) {
+  .tab-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab-menu li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ============================
+   4. PÁGINA SERVICIOS
+============================ */
+.servicios-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.servicios-page h1 {
+  text-align: center;
+  color: #001e4f;
+  margin-bottom: 30px;
+}
+
+/* Sección texto + imagen */
+.servicios-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.servicios-text {
+  flex: 1;
+  font-size: 1rem;
+  color: #282828;
+  line-height: 1.5;
+}
+
+.servicios-image {
+  flex: 1;
+  text-align: center;
+}
+
+.servicios-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Sección Brochure */
+.brochure {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.brochure h2 {
+  color: #001e4f;
+  margin-bottom: 20px;
+}
+
+.brochure p {
+  color: #282828;
+  margin-bottom: 15px;
+}
+
+/* Botón de descarga */
+.btn-descargar {
+  display: inline-block;
+  background-color: #ce7036;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-descargar:hover {
+  background-color: #b85c2d;
+}
+
+/* Responsive Servicios */
+@media (max-width: 768px) {
+  .servicios-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .servicios-image,
+  .servicios-text {
+    width: 100%;
+    flex: unset;
+  }
+}
+
+/* ============================
+   5. PÁGINA BIOGRAFÍA
+============================ */
+.biografia {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.biografia h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #001e4f;
+  margin-bottom: 20px;
+}
+
+.biografia p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #282828;
+  text-align: left;
+}
+
+/* Misión, Visión y Valores */
+.mision-vision-valores {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.mision-vision-valores > div {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.mision-vision-valores h2 {
+  font-size: 1.8rem;
+  color: #001e4f;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.mision-vision-valores p,
+.mision-vision-valores ul {
+  font-size: 1rem;
+  color: #282828;
+  text-align: left;
+}
+
+.mision-vision-valores ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Responsive Biografía */
+@media (max-width: 768px) {
+  .mision-vision-valores {
+    flex-direction: column;
+  }
+}
+
+/* ============================
+   6. PÁGINA CONTACTO
+============================ */
+.contacto-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contacto-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #001e4f;
+  margin-bottom: 20px;
+}
+
+/* Formulario de contacto */
+.contact-form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-enviar {
+  background-color: #ce7036;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+  background-color: #b85c2d;
+}
+
+/* Botón WhatsApp */
+.whatsapp-contact {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  align-items: center;
+}
+
+.btn-whatsapp i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+/* ============================
+   7. FOOTER
+============================ */
+footer {
+  background-color: #014f6f; /* Fondo azul oscuro */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-box.right-box {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Datos de contacto en el footer */
+.contact-data p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* Derechos de autor */
+footer .copyright {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-box.right-box {
+    width: 100%;
+  }
+}
