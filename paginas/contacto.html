@@ -21,35 +21,43 @@
     <h1>Contacto</h1>
     
     <!-- Formulario de contacto -->
-    <form action="mailto:proyectos@malagonsaavedra.com" method="post" enctype="multipart/form-data" class="contact-form">
-      <div class="form-group">
-        <label for="nombre">Nombre <span>*</span></label>
-        <input type="text" id="nombre" name="nombre" required>
-      </div>
-      <div class="form-group">
-        <label for="telefono">Teléfono <span>*</span></label>
-        <input type="tel" id="telefono" name="telefono" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email <span>*</span></label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="asunto">Asunto <span>*</span></label>
-        <input type="text" id="asunto" name="asunto" required>
-      </div>
-      <div class="form-group">
-        <label for="mensaje">Mensaje <span>*</span></label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-      </div>
-      <div class="form-group">
-        <label for="archivo">Adjuntar archivo (opcional)</label>
-        <input type="file" id="archivo" name="archivo">
-      </div>
-      <div class="form-actions">
-        <button type="submit" class="btn-enviar">Enviar</button>
-      </div>
-    </form>
+<form action="mailto:proyectos@malagonsaavedra.com" method="post" enctype="multipart/form-data" class="contact-form">
+    <div class="form-group">
+      <label for="nombre">Nombre <span>*</span></label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono <span>*</span></label>
+      <input type="tel" id="telefono" name="telefono" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email <span>*</span></label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="asunto">Asunto <span>*</span></label>
+      <input type="text" id="asunto" name="asunto" required>
+    </div>
+    <div class="form-group">
+      <label for="mensaje">Mensaje <span>*</span></label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="archivo">Adjuntar archivo (opcional)</label>
+      <input type="file" id="archivo" name="archivo">
+    </div>
+    <!-- Checkbox para aceptar la política de tratamiento de datos -->
+    <div class="form-group">
+      <input type="checkbox" id="consent" name="consent" required>
+      <label for="consent">
+        Acepto la <a href="/paginas/habeasdata.html" target="_blank">Política de Tratamiento de Datos</a>
+      </label>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </div>
+  </form>
+  
     
     <!-- Botón de contacto vía WhatsApp -->
     <div class="whatsapp-contact">
