@@ -386,16 +386,18 @@ html, body {
    7. FOOTER
 ============================ */
 footer {
-  background-color: #014f6f; /* Fondo azul oscuro */
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
+  width: 100%;              /* Ocupa todo el ancho */
+  background-color: #014f6f;/* Fondo azul oscuro */
+  padding: 40px 0;          /* Espacio vertical */
   color: #fff;
+  font-family: Arial, sans-serif;
 }
 
 .footer-container {
+  /* El contenedor interno se centra y limita el ancho del contenido */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;          /* Espacio horizontal dentro del contenedor */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -412,8 +414,8 @@ footer {
 .contact-data p {
   margin: 10px 0;
   font-size: 1rem;
-  color: #fff;
   line-height: 1.4;
+  color: #fff;
 }
 
 /* Derechos de autor */
@@ -424,7 +426,7 @@ footer .copyright {
   color: #fff;
 }
 
-/* Responsive Footer */
+/* Responsividad Footer */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
