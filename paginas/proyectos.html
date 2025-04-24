@@ -19,60 +19,132 @@
   </header>
 
   <main class="proyectos">
-    <h1>Nuestros Proyectos</h1>
+    <h1>Algunos de nuestros Proyectos</h1>
     
     <div class="tabs">
       <!-- Menú de pestañas -->
       <ul class="tab-menu">
-        <li class="active" data-tab="tab1">Proyecto 1</li>
-        <li data-tab="tab2">Proyecto 2</li>
-        <li data-tab="tab3">Proyecto 3</li>
-        <li data-tab="tab4">Proyecto 4</li>
+        <li class="active" data-tab="tab1">Parques de la 90</li>
+        <li data-tab="tab2">Centro Recreativo Colsubsidio Torca</li>
+        <li data-tab="tab3">Edificio Navalera - Cartagena</li>
+        <li data-tab="tab4">Casa Cabrera</li>
       </ul>
       
       <!-- Contenido de las pestañas -->
       <div class="tab-content">
         <div id="tab1" class="tab-panel active">
-          <h2>Proyecto 1</h2>
+          <h2>Parques de la 90</h2>
           <div class="project-media">
-            <img src="../img/proyectos/proyecto1.jpg" alt="Imagen del Proyecto 1">
+            <img src="../img/proyectos/parque_90.jpg" alt="Imagen del Proyecto 1">
           </div>
           <div class="project-description">
             <p>
-              Aquí se describe el Proyecto 1. Puedes incluir detalles, especificaciones y otra información relevante.
+              <strong style="font-size: large;">CONTRATANTE: PRODESA.</strong> 
+              <li>
+                <strong>TRABAJOS REALIZADOS:</strong> CONSTRUCCION ELÉCTRICAS TELEFONICAS Y AFINES
+                <br>
+              </li>
+              <li>
+                <strong>NUMERO DE VIVIENDAS:</strong> 60
+                <br>
+              </li>
+              <li>
+                <strong>FECHA EJECUCION:</strong> 2004
             </p>
           </div>
         </div>
         <div id="tab2" class="tab-panel">
-          <h2>Proyecto 2</h2>
+          <h2>Centro Recreativo Colsubsidio Torca</h2>
           <div class="project-media">
-            <img src="../img/proyectos/proyecto2.jpg" alt="Imagen del Proyecto 2">
+            <img src="../img/proyectos/club-torca.jpg" alt="Imagen del Proyecto 2">
           </div>
           <div class="project-description">
             <p>
-              Aquí se describe el Proyecto 2. Incluye información detallada e imágenes representativas.
+              <strong style="font-size: large;">CONTRATANTE: CONINSA Y RAMON HACHE S.A.</strong> <a href="https://www.coninsa.co/construccion/proyectos/infraestructura-urbana/centro-recreativo-colsubsidio-torca">Link</a>
+              <li>
+                <strong>TRABAJOS REALIZADOS:</strong> CONSTRUCCION DE REDES ELÉCTRICAS EXTERIORES
+                <br>
+              </li>
+              <li>
+                <strong>FECHA EJECUCION:</strong> ENERO DE 2003
             </p>
           </div>
         </div>
         <div id="tab3" class="tab-panel">
-          <h2>Proyecto 3</h2>
+          <h2>Edificio Navalera - Cartagena</h2>
           <div class="project-media">
-            <img src="../img/proyectos/proyecto3.jpg" alt="Imagen del Proyecto 3">
+            <img src="../img/proyectos/naviera.png" alt="Imagen del Proyecto 3">
           </div>
           <div class="project-description">
             <p>
-              Aquí se describe el Proyecto 3. Detalla sus características y resultados.
+              <strong style="font-size: large;">OCHO DOCE CONSTRUCCION S.A.S</strong> <a href="https://www.facebook.com/infoochodoce/?locale=es_LA"> Link </a>
+              <li>
+                <strong>TRABAJOS REALIZADOS:</strong> INSTALACIONES ELECTRICAS TELEFONICAS, AFINES REDES DE MEDIA Y BAJA TENSION.
+                <br>
+              </li>
+              <li>
+                <strong>FECHA EJECUCION:</strong> 2018
             </p>
           </div>
+
+           <!-- Sección de vídeo -->
+  <div class="video-section" style="margin-top: 20px;">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/7yud53YE5l0?start=68"
+        title="Vídeo proyecto Navalera"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <style>
+    /* Fondo y espaciado de la sección de vídeo */
+    #tab3 .video-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #001e4f;
+  padding: 20px 0;
+}
+
+
+/* Wrapper responsivo manteniendo relación 16:9
+   y limitando el alto máximo a 400px (711px de ancho equivale a 400px de alto en 16:9) */
+#tab3 .video-wrapper {
+  position: relative;
+  width: 60%;
+  max-width: 911px;      /* 400px × (16/9) ≈ 711px */
+  margin: 0 auto;
+  padding-top: 46.25%;    /* 9/16 = 0.5625 */
+}
+
+/* El iframe ocupa todo el wrapper */
+#tab3 .video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+  </style>
         </div>
         <div id="tab4" class="tab-panel">
-          <h2>Proyecto 4</h2>
+          <h2>Casa Cabrera</h2>
           <div class="project-media">
-            <img src="../img/proyectos/proyecto4.jpg" alt="Imagen del Proyecto 4">
+            <img src="../img/proyectos/casa-cabrera.png" alt="Imagen del Proyecto 4">
           </div>
           <div class="project-description">
             <p>
-              Aquí se describe el Proyecto 4. Explica el proceso, avances y logros alcanzados.
+              <strong style="font-size: large;">CONSTRUCTORA OKAP</strong> <a href="https://okap.co/2024/07/23/casa-cabrera/"> Link</a>
+              <li>
+                <strong>TRABAJOS REALIZADOS:</strong> INSTALACIONES ELECTRICAS TELEFONICAS, AFINES REDES DE MEDIA Y BAJA TENSION.
+                <br>
+              </li>
+              <li>
+                <strong>FECHA EJECUCION:</strong> 2022- EN EJECUCIÓN
             </p>
           </div>
         </div>
@@ -80,6 +152,24 @@
     </div>
   </main>
   
+
+<!-- Footer con datos de contacto y normativa -->
+<footer>
+  <div class="footer-container">
+    <!-- Caja derecha: Contacto y redes -->
+    <div class="contact-data">
+      <p><i class="fas fa-map-marker-alt"></i> Calle 74 A # 61-30 Barrio San Fernando | Bogotá – Colombia</p>
+      <p><i class="fas fa-phone"></i> Tel: 601 5175774</p>
+      <p><i class="fas fa-mobile-alt"></i> Cel: +57 3134128699</p>
+      <p><i class="fas fa-envelope"></i> proyectos@malagonsaavedra.com</p>
+    </div>
+  </div>
+
+<div class="copyright" style="text-align: center; color: white;">
+  <p>&copy; 2025 Malagón Saavedra y Cía. S.A.S</p>
+</div>
+</footer>
+
   <script>
     // JavaScript para cambiar entre pestañas
     document.addEventListener('DOMContentLoaded', function() {

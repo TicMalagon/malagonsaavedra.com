@@ -24,7 +24,7 @@ function calculateWidths() {
     const slideWidth = slides[i].getBoundingClientRect().width;
     singleSetWidth += (slideWidth + 60);
   }
-  // Quita 60 si no deseas sumarle el último gap
+
 }
 
 // Función para animar el movimiento continuo
