@@ -6,12 +6,12 @@
   <title>Galería - Malagón Saavedra y Cía. S.A.S</title>
   <link rel="stylesheet" href="style.css">
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  integrity="sha512-..."
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <style>
     body {
       margin: 0;
@@ -46,28 +46,39 @@
       transform: scale(1.2);
     }
     @media (max-width: 1024px) {
-      .gallery {
-        column-count: 3;
-      }
+      .gallery { column-count: 3; }
     }
     @media (max-width: 768px) {
-      .gallery {
-        column-count: 2;
-      }
+      .gallery { column-count: 2; }
     }
     @media (max-width: 480px) {
-      .gallery {
-        column-count: 1;
-      }
+      .gallery { column-count: 1; }
     }
   </style>
 </head>
 <body>
-      <!-- Encabezado con el logo (enlace al inicio) -->
-  <header class="page-header">
-    <a href="../index.html">
-      <img src="../img/logo-2025-horizontal.png" alt="Logo Malagón Saavedra" class="header-logo">
-    </a>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/index.html"><img src="/img/logo-2025.png" alt="MalagonSaavedra"></a>
+      </div>
+      <input type="checkbox" id="toggle">
+      <label for="toggle" class="hamburger">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="/index.html#inicio">Inicio</a></li>
+        <li><a href="/paginas/proyectos.html">Nuestros Proyectos</a></li>
+        <li><a href="/paginas/servicios.html">Servicios</a></li>
+        <li><a href="/paginas/biografia.html">Quiénes Somos</a></li>
+        <li><a href="/paginas/contacto.html">Contáctenos</a></li>
+        <li>
+          <a href="https://malagonsaavedra.vercel.app/">
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <h1>Galería <a href="https://www.instagram.com/malagonsaavedra_y_cia_s.a.s/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></h1>
   <div class="gallery">

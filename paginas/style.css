@@ -13,6 +13,118 @@ html, body {
   line-height: 1.6;
 }
 
+
+//* ============================
+   X. NAVBAR (común a todas las páginas)
+============================ */
+:root {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Logo izq, enlaces centro, hamburguesa der */
+  background-color: #9a999e;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Logo */
+.navbar .logo {
+  flex: 0 0 auto;
+}
+.navbar .logo img {
+  height: clamp(40px, 6vw, 60px);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* Menú de enlaces centrado */
+.nav-links {
+  display: flex;
+  flex: 1 1 auto;    /* Ocupa espacio central */
+  justify-content: center;
+  gap: 20px;          /* Separación uniforme */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cada enlace */
+.nav-links li {
+  margin: 0;
+}
+.nav-links li a {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #ce7036;
+  border-radius: 4px;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  flex: 0 0 auto;
+  display: none;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  cursor: pointer;
+  color: #282828;
+}
+
+/* Ocultar checkbox */
+#toggle {
+  display: none;
+}
+
+/* Responsive: menú hamburguesa en móvil */
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #9a999e;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+
+    /* Nuevo: centramos los ítems */
+    align-items: center;
+  }
+  .nav-links li {
+    margin: 10px 0;
+    width: 100%;             /* Ocupa todo el ancho del menú */
+  }
+  .nav-links li a {
+    display: block;          /* Para que el width funcione */
+    width: 100%;
+    text-align: center;      /* Centrar el texto */
+  }
+  /* Mostrar menú al activar checkbox */
+  #toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
 /* ============================
    2. ENCABEZADO (HEADER)
 ============================ */

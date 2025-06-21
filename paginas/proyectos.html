@@ -6,17 +6,41 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/img/logo-2025.png">
   <title>Nuestros Proyectos - Malagón Saavedra y Cía. S.A.S</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Carga de FontAwesome, si se requiere -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
-        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-…"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
-  <!-- Encabezado con logo -->
-  <header class="page-header">
-    <a href="../index.html">
-      <img src="../img/logo-2025-horizontal.png" alt="Logo Malagón Saavedra" class="header-logo">
-    </a>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/index.html"><img src="/img/logo-2025.png" alt="MalagonSaavedra"></a>
+      </div>
+      <input type="checkbox" id="toggle">
+      <label for="toggle" class="hamburger">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="/index.html#inicio">Inicio</a></li>
+        <li><a href="/paginas/servicios.html">Servicios</a></li>
+        <li><a href="/paginas/biografia.html">Quiénes Somos</a></li>
+        <li><a href="/paginas/galería.html">Galería</a></li>
+        <li><a href="/paginas/contacto.html">Contáctenos</a></li>
+        <li>
+          <a href="https://malagonsaavedra.vercel.app/">
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
+
+  <!-- Encabezado con logo -->
+
 
   <main class="proyectos">
     <h1>Algunos de nuestros Proyectos</h1>
@@ -40,19 +64,15 @@
           <div class="project-description">
             <p>
               <strong style="font-size: large;">CONTRATANTE: PRODESA S.A.S.</strong> 
-              <li>
-                <strong>TRABAJOS REALIZADOS:</strong> CONSTRUCCIÓN ELÉCTRICAS TELEFÓNICAS Y AFINES
-                <br>
-              </li>
-              <li>
-                <strong>NUMERO DE VIVIENDAS:</strong> 60
-                <br>
-              </li>
-              <li>
-                <strong>FECHA EJECUCIÓN:</strong> 2004
             </p>
+            <ul>
+              <li><strong>TRABAJOS REALIZADOS:</strong> CONSTRUCCIÓN ELÉCTRICAS TELEFÓNICAS Y AFINES</li>
+              <li><strong>NÚMERO DE VIVIENDAS:</strong> 60</li>
+              <li><strong>FECHA EJECUCIÓN:</strong> 2004</li>
+            </ul>
           </div>
         </div>
+
         <div id="tab2" class="tab-panel">
           <h2>Centro Recreativo Colsubsidio Torca</h2>
           <div class="project-media">
@@ -60,16 +80,16 @@
           </div>
           <div class="project-description">
             <p>
-              <strong style="font-size: large;">CONTRATANTE: CONINSA Y RAMON HACHE S.A.</strong> <a href="https://www.coninsa.co/construccion/proyectos/infraestructura-urbana/centro-recreativo-colsubsidio-torca">Link</a>
-              <li>
-                <strong>TRABAJOS REALIZADOS:</strong> CONSTRUCCIÓN DE REDES ELÉCTRICAS EXTERIORES
-                <br>
-              </li>
-              <li>
-                <strong>FECHA EJECUCIÓN:</strong> ENERO DE 2003
+              <strong style="font-size: large;">CONTRATANTE: CONINSA Y RAMON HACHE S.A.</strong>
+              <a href="https://www.coninsa.co/construccion/proyectos/infraestructura-urbana/centro-recreativo-colsubsidio-torca">Link</a>
             </p>
+            <ul>
+              <li><strong>TRABAJOS REALIZADOS:</strong> CONSTRUCCIÓN DE REDES ELÉCTRICAS EXTERIORES</li>
+              <li><strong>FECHA EJECUCIÓN:</strong> ENERO DE 2003</li>
+            </ul>
           </div>
         </div>
+
         <div id="tab3" class="tab-panel">
           <h2>Edificio Navalera - Cartagena</h2>
           <div class="project-media">
@@ -77,60 +97,28 @@
           </div>
           <div class="project-description">
             <p>
-              <strong style="font-size: large;">OCHO DOCE CONSTRUCCIÓN S.A.S</strong> <a href="https://www.facebook.com/infoochodoce/?locale=es_LA"> Link </a>
-              <li>
-                <strong>TRABAJOS REALIZADOS:</strong> INSTALACIONES ELÉTRICAS TELEFÓNICAS, AFINES REDES DE MEDIA Y BAJA TENSIÓN.
-                <br>
-              </li>
-              <li>
-                <strong>FECHA EJECUCIÓN:</strong> 2018
+              <strong style="font-size: large;">OCHO DOCE CONSTRUCCIÓN S.A.S</strong>
+              <a href="https://www.facebook.com/infoochodoce/?locale=es_LA">Link</a>
             </p>
+            <ul>
+              <li><strong>TRABAJOS REALIZADOS:</strong> INSTALACIONES ELÉCTRICAS TELEFÓNICAS, AFINES, REDES DE MEDIA Y BAJA TENSIÓN.</li>
+              <li><strong>FECHA EJECUCIÓN:</strong> 2018</li>
+            </ul>
           </div>
 
-           <!-- Sección de vídeo -->
-  <div class="video-section" style="margin-top: 20px;">
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/7yud53YE5l0?start=68"
-        title="Vídeo proyecto Navalera"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-
-  <style>
-    /* Fondo y espaciado de la sección de vídeo */
-    #tab3 .video-section {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background-color: #001e4f;
-  padding: 20px 0;
-}
-
-
-/* Wrapper responsivo manteniendo relación 16:9
-   y limitando el alto máximo a 400px (711px de ancho equivale a 400px de alto en 16:9) */
-#tab3 .video-wrapper {
-  position: relative;
-  width: 60%;
-  max-width: 911px;      /* 400px × (16/9) ≈ 711px */
-  margin: 0 auto;
-  padding-top: 46.25%;    /* 9/16 = 0.5625 */
-}
-
-/* El iframe ocupa todo el wrapper */
-#tab3 .video-wrapper iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-  </style>
+          <!-- Sección de vídeo -->
+          <div class="video-section" style="margin-top: 20px;">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/7yud53YE5l0?start=68"
+                title="Vídeo proyecto Navalera"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
         </div>
+
         <div id="tab4" class="tab-panel">
           <h2>Casa Cabrera</h2>
           <div class="project-media">
@@ -138,67 +126,56 @@
           </div>
           <div class="project-description">
             <p>
-              <strong style="font-size: large;">CONSTRUCTORA OKAP</strong> <a href="https://okap.co/2024/07/23/casa-cabrera/"> Link</a>
-              <li>
-                <strong>TRABAJOS REALIZADOS:</strong> INSTALACIONES ELÉCTRICAS TELEFÓNICAS, AFINES REDES DE MEDIA Y BAJA TENSIÓN.
-                <br>
-              </li>
-              <li>
-                <strong>FECHA EJECUCIÓN:</strong> 2022- EN EJECUCIÓN
+              <strong style="font-size: large;">CONSTRUCTORA OKAP</strong>
+              <a href="https://okap.co/2024/07/23/casa-cabrera/">Link</a>
             </p>
+            <ul>
+              <li><strong>TRABAJOS REALIZADOS:</strong> INSTALACIONES ELÉCTRICAS TELEFÓNICAS, AFINES, REDES DE MEDIA Y BAJA TENSIÓN.</li>
+              <li><strong>FECHA EJECUCIÓN:</strong> 2022 - EN EJECUCIÓN</li>
+            </ul>
           </div>
         </div>
+
       </div>
     </div>
   </main>
-  
 
-<!-- Footer con datos de contacto y normativa -->
-<footer>
-  <style>
-    .footer-container .contact-data {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      align-items: center;
-    }
-  
-    .footer-container .contact-data p {
-      margin: 0;
-    }
-  </style>
-  
-  <div class="footer-container">
-    <div class="contact-data">
-      <p><i class="fas fa-map-marker-alt"></i> Calle 74 A # 61-30 Barrio San Fernando | Bogotá, Colombia</p>
-      <p><i class="fas fa-phone"></i> Tel: 601 5175774</p>
-      <p><i class="fas fa-mobile-alt"></i> Cel: +57 3134128699</p>
-      <p><i class="fas fa-envelope"></i> proyectos@malagonsaavedra.com</p>
+  <!-- Footer con datos de contacto y normativa -->
+  <footer>
+    <style>
+      .footer-container .contact-data {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      .footer-container .contact-data p {
+        margin: 0;
+      }
+    </style>
+    <div class="footer-container">
+      <div class="contact-data">
+        <p><i class="fas fa-map-marker-alt"></i> Calle 74 A # 61-30 Barrio San Fernando | Bogotá, Colombia</p>
+        <p><i class="fas fa-phone"></i> Tel: 601 5175774</p>
+        <p><i class="fas fa-mobile-alt"></i> Cel: +57 3134128699</p>
+        <p><i class="fas fa-envelope"></i> proyectos@malagonsaavedra.com</p>
+      </div>
     </div>
-  </div>
-  
-
-<div class="copyright" style="text-align: center; color: white;">
-  <p>&copy; 2025 Malagón Saavedra y Cía. S.A.S</p>
-</div>
-</footer>
+    <div class="copyright" style="text-align: center; color: white;">
+      <p>&copy; 2025 Malagón Saavedra y Cía. S.A.S</p>
+    </div>
+  </footer>
 
   <script>
-    // JavaScript para cambiar entre pestañas
     document.addEventListener('DOMContentLoaded', function() {
       const tabs = document.querySelectorAll('.tab-menu li');
       const panels = document.querySelectorAll('.tab-panel');
-
       tabs.forEach(tab => {
         tab.addEventListener('click', function() {
-          // Quitar la clase active de todos
           tabs.forEach(item => item.classList.remove('active'));
           panels.forEach(panel => panel.classList.remove('active'));
-          
-          // Activar la pestaña y panel correspondientes
           this.classList.add('active');
-          const panelId = this.getAttribute('data-tab');
-          document.getElementById(panelId).classList.add('active');
+          document.getElementById(this.dataset.tab).classList.add('active');
         });
       });
     });
