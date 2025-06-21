@@ -1,4 +1,4 @@
-name: 🚀 Deploy WordPress vía FTP/SFTP
+name: 🚀 Deploy WordPress vía FTPS
 
 on:
   push:
@@ -6,23 +6,23 @@ on:
       - main
 
 jobs:
-  ftp-deploy:
+  ftps-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy via FTP/SFTP
+      - name: Deploy via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server:     ${{ secrets.FTP_SERVER }}
           username:   ${{ secrets.FTP_USERNAME }}
           password:   ${{ secrets.FTP_PASSWORD }}
-          protocol:   ${{ secrets.FTP_PROTOCOL }}   # ftp
-          port:       ${{ secrets.FTP_PORT }}       # 21
-          local-dir:  ./                             # ruta local de tu repo
-          server-dir: /                              # raíz en el servidor (/public_html)
+          protocol:   ftps          # FTPS explícito (TLS)
+          port:       21            # puerto FTPS explícito
+          local-dir:  ./            # raíz del repo
+          server-dir: /             # apunta a /home/malagons/public_html
           dry-run:    false
 
       - name: Confirmar despliegue
