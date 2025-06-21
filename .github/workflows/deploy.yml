@@ -16,14 +16,14 @@ jobs:
       - name: Deploy via FTP/SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ${{ secrets.FTP_PROTOCOL }}
-          port: ${{ secrets.FTP_PORT }}
-          local-dir: ./
-          server-dir: /
-          dry-run: false
+          server:     ${{ secrets.FTP_SERVER }}
+          username:   ${{ secrets.FTP_USERNAME }}
+          password:   ${{ secrets.FTP_PASSWORD }}
+          protocol:   ${{ secrets.FTP_PROTOCOL }}   # ftp
+          port:       ${{ secrets.FTP_PORT }}       # 21
+          local-dir:  ./                             # ruta local de tu repo
+          server-dir: /                              # raíz en el servidor (/public_html)
+          dry-run:    false
 
       - name: Confirmar despliegue
         if: success()
