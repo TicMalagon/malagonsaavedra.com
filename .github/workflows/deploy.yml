@@ -1,0 +1,29 @@
+name: 🚀 Deploy WordPress vía FTP/SFTP
+
+on:
+  push:
+    branches: [ main ]  # Cambia si tu rama de producción tiene otro nombre
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy via FTP/SFTP
+        uses: SamKirkland/FTP-Deploy-Action@4.6.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ secrets.FTP_PROTOCOL }}   # 'sftp' o 'ftp'
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: ./                           # raíz del repo: wp-admin, wp-content, wp-includes…
+          server-dir: /                          # apunta a /home/malagons/public_html
+          dry-run: false
+
+      - name: Confirmar despliegue
+        if: success()
+        run: echo "✅ Despliegue completado correctamente"
